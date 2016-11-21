@@ -2,10 +2,7 @@
  * 
  */
 var buttonCount=0;
-var forename = new Array();
-var pobarray = [];
-var dobarray = [];
-var ckarray  = [];
+var array = new Array();
 
 window.onload=function(){
  $("#myButton").click(function(){
@@ -32,19 +29,29 @@ function register(){
 }
 
 function arrayInput(){
- forename.push($("#vorname").val());
- pobarray.push($("#pob").val());
- dobarray.push($("#dob").val());
- ckarray.push($("#checkbox").val());
+ array.push($("#vorname").val());
+ array.push($("#pob").val());
+ array.push($("#dob").val());
+ array.push($("#checkbox").val());
  
 }
 
 function showUp(){
 	var content = "<table>";
-	 content+= "<tr>"+ $("#vorname").val() + "</tr>"
-	
-	
-	
+//	 content+= "<tr>"+ $("#vorname").val() + "</tr>";
+	for(i=0; i<array.length; i++){
+		if(i%4==0){
+			content+="<tr><td>" +array[i]+ "</td>";
+		}
+		else{
+			content +="<td>" + array[i] + "</td>";
+		}
+		if(i%4==3){
+			content +="</tr>";
+		}
+	}
+
+
 	/**
 		content += "<tr>";
 		for(i=0; i<forename.length; i++){
@@ -71,6 +78,7 @@ function showUp(){
 		content += "</tr>";
 		**/
 	content += "</table>";
+	$("#resulttablediv").empty();
 	$("#resulttablediv").append(content);
 }
 
