@@ -1,0 +1,14 @@
+
+.starBox {
+    width: 30px;
+    height: 30px;
+    background: url("../rsc/starFilled.png") no-repeat;
+    background-size: 30px 30px;
+}
+
+.starBox:hover {
+    width: 30px;
+    height: 30px;
+    background: url("../rsc/starUnFilled.png") no-repeat;
+    background-size: 30px 30px;
+}

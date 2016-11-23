@@ -16,9 +16,18 @@ window.onload=function(){
  })
 };
 
-function hello(){
+function hello(i){
 	//document.getElementById("test").innerHTML ="Hallo";
-	$("#test").text("New Text");
+	array[i]="false";
+    $("#test").text(array[i]);
+    showUp();
+}
+
+function bye(i){
+    //document.getElementById("test").innerHTML ="Hallo";
+    array[i]=true;
+    $("#test").text(array[i]);
+    showUp();
 }
 
 function register(){
@@ -29,27 +38,39 @@ function register(){
 }
 
 function arrayInput(){
- array.push($("#vorname").val());
- array.push($("#pob").val());
- array.push($("#dob").val());
- array.push($("#checkbox").val());
- 
+	array.push(buttonCount);
+	array.push($("#vorname").val());
+ 	array.push($("#pob").val());
+	array.push($("#dob").val());
+ 	array.push($("#checkbox:checked").val());
+
 }
 
 function showUp(){
-	var content = "<table>";
+	var content = "<table border = 1>";
 //	 content+= "<tr>"+ $("#vorname").val() + "</tr>";
-	for(i=0; i<array.length; i++){
-		if(i%4==0){
+	for(var i=0; i<array.length; i++){
+		if(i%5==0){
 			content+="<tr><td>" +array[i]+ "</td>";
+		}
+		else if(i%5==4){
+            if(array[i]!="true"){
+                content += '<td><div id="favimg'+i+'"onclick="bye('+i+')"></div></td>';
+            }
+		    else if(array[i]=="true") {
+			//Bild
+			content += '<td><div id="favimg' +i+' "class="starBox" onclick="hello('+i+')"></div></td>';
+		}
 		}
 		else{
 			content +="<td>" + array[i] + "</td>";
 		}
-		if(i%4==3){
+		if(i%5==4){
+
 			content +="</tr>";
 		}
 	}
+	content += "</table>";
 
 
 	/**
@@ -77,9 +98,10 @@ function showUp(){
 		}
 		content += "</tr>";
 		**/
-	content += "</table>";
+
 	$("#resulttablediv").empty();
 	$("#resulttablediv").append(content);
+	$("#resulttablediv").append();
 }
 
 function validateForm() {
