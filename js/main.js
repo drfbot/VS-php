@@ -9,6 +9,7 @@ window.onload=function(){
 	 //alert("Servus");
 	 hello();
  })
+    
  $("#fave").click(function(){
 	 //ev.preventDefault();
 	 register();
@@ -19,14 +20,15 @@ window.onload=function(){
 function hello(i){
 	//document.getElementById("test").innerHTML ="Hallo";
 	array[i]="false";
-    $("#test").text(array[i]);
+    $("#test").text(array);
+    console.log("VALUE an i: " + array[i]);
     showUp();
 }
 
 function bye(i){
     //document.getElementById("test").innerHTML ="Hallo";
-    array[i]=true;
-    $("#test").text(array[i]);
+    array[i]="true";
+    console.log("VALUE an i: " + array[i]);
     showUp();
 }
 
@@ -43,7 +45,8 @@ function arrayInput(){
  	array.push($("#pob").val());
 	array.push($("#dob").val());
  	array.push($("#checkbox:checked").val());
-
+    console.log("CHECKBOX: "+ $("#checkbox:checked").val());
+    console.log("VALUE: " + array[array.length-1]);
 }
 
 function showUp(){
@@ -55,11 +58,11 @@ function showUp(){
 		}
 		else if(i%5==4){
             if(array[i]!="true"){
-                content += '<td><div id="favimg'+i+'"onclick="bye('+i+')"></div></td>';
+                content += '<td><div id="favimg' +i+ '"class="emptyBox" onclick="bye('+i+')"></div></td>';
             }
 		    else if(array[i]=="true") {
 			//Bild
-			content += '<td><div id="favimg' +i+' "class="starBox" onclick="hello('+i+')"></div></td>';
+			    content += '<td><div id="favimg' +i+' "class="starBox" onclick="hello('+i+')"></div></td>';
 		}
 		}
 		else{
