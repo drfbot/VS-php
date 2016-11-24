@@ -15,6 +15,13 @@ window.onload=function(){
 	 register();
 	 showUp();
  })
+	$("#searchSubmit").click(function () {
+	// search logic here
+	console.log("Search-2 aktiv")
+	// this function will be executed on click of X (clear button)
+	//console.log($("#search-2").val());
+	search();
+	})
 };
 
 function hello(i){
@@ -30,23 +37,6 @@ function bye(i){
     array[i]="true";
     console.log("VALUE an i: " + array[i]);
     showUp();
-}
-
-function register(){
-	this.buttonCount++;
-	arrayInput();
-	//$("#test").text(("#vorname").val());
-	//showUp();
-}
-
-function arrayInput(){
-	array.push(buttonCount);
-	array.push($("#vorname").val());
- 	array.push($("#pob").val());
-	array.push($("#dob").val());
- 	array.push($("#checkbox:checked").val());
-    console.log("CHECKBOX: "+ $("#checkbox:checked").val());
-    console.log("VALUE: " + array[array.length-1]);
 }
 
 function showUp(){
@@ -76,35 +66,8 @@ function showUp(){
 	content += "</table>";
 
 
-	/**
-		content += "<tr>";
-		for(i=0; i<forename.length; i++){
-			content += "<td>" + forname[i] +"</td>";
-		}
-		content += "</tr>";
-		
-		content += "<tr>";
-		for(j=0; j<forename.length; j++){
-			content += "<td>" + pobarray[j] +"</td>";
-		}
-		content += "</tr>";
-		
-		content += "<tr>";
-		for(k=0; k<forename.length; k++){
-			content += "<td>" + dobarray[k] +"</td>";
-		}
-		content += "</tr>";
-		
-		content += "<tr>";
-		for(l=0; l<forename.length; l++){
-			content += "<td>" + ckarray[l] +"</td>";
-		}
-		content += "</tr>";
-		**/
-
 	$("#resulttablediv").empty();
 	$("#resulttablediv").append(content);
-	//$("#resulttablediv").append();
 }
 
 function validateForm() {
