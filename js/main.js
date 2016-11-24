@@ -20,7 +20,7 @@ window.onload=function(){
 function hello(i){
 	//document.getElementById("test").innerHTML ="Hallo";
 	array[i]="false";
-    $("#test").text(array);
+    //$("#test").text(array);
     console.log("VALUE an i: " + array[i]);
     showUp();
 }
@@ -104,7 +104,7 @@ function showUp(){
 
 	$("#resulttablediv").empty();
 	$("#resulttablediv").append(content);
-	$("#resulttablediv").append();
+	//$("#resulttablediv").append();
 }
 
 function validateForm() {
