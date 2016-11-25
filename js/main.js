@@ -25,23 +25,23 @@ window.onload=function(){
 };
 
 function hello(i){
-	//document.getElementById("test").innerHTML ="Hallo";
+	//document.getElementById("test").innerHTML ="fyi";
 	array[i]="false";
     //$("#test").text(array);
-    console.log("VALUE an i: " + array[i]);
+    //console.log("VALUE an i: " + array[i]);
     showUp();
 }
 
 function bye(i){
-    //document.getElementById("test").innerHTML ="Hallo";
+    //document.getElementById("test").innerHTML ="wtf";
     array[i]="true";
-    console.log("VALUE an i: " + array[i]);
+    //console.log("VALUE an i: " + array[i]);
     showUp();
 }
 
 function showUp(){
-	var content = "<table border = 1>";
-//	 content+= "<tr>"+ $("#vorname").val() + "</tr>";
+	var content = '<table class="table" border = 1>';
+
 	for(var i=0; i<array.length; i++){
 		if(i%5==0){
 			content+="<tr><td>" +array[i]+ "</td>";

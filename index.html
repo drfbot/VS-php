@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<head>
+<head xmlns="http://www.w3.org/1999/html">
 <meta charset="UTF-8">
 <title>Amazing JavaScript</title>
 </head>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
 <script src="js/jquery3.1-1.js"></script>
 <script src="js/main.js"></script>
 <script src="js/ArtistHandler.js"></script>
 
 <body>
-
-<div>
-  <label for="search-2">search by name:</label>
-  <input type="search" name="search-2" id="search-2" placeholder="Namen eingeben">
-  <input type="submit" id="searchSubmit">
+<div class="page-header">
+  <h1>Register your Artist <small>The Self-Made-Database</small></h1>
+</div>
+<div class="container">
+<div class="col-lg-9">
+<div class="navbar-form navbar-left">
+    <label for="search-2">search by name:</label>
+    <input type="search" name="search-2" id="search-2" placeholder="Namen eingeben">
+    <input type="submit" id="searchSubmit">
 </div>
 
-<br>
-<div id="resulttablediv">
 
+<div class="col-sm-6" id="resulttablediv">
 </div>
-<br>
 
-<form>
-<label>Forename</label>
-<input type=text id="vorname"><br>
-<label>Place of Birth</label>
-<input type=text id="pob"><br>
-<label>Date of Birth</label>
-<input type=text id="dob"><br>
-<label>Favourite</label>
-<input type="checkbox" value="true" id="checkbox"><br>
-<button type="button" id="fave"> Register</button>
-</form>
-<br>
-
+  <div class="col-sm-6">
+  <form>
+  <label>Forename</label>
+  <input type=text id="vorname"><br>
+  <label>Place of Birth</label>
+  <input type=text id="pob"><br>
+  <label>Date of Birth</label>
+  <input type=text id="dob"><br>
+  <label>Favourite</label>
+  <input type="checkbox" value="true" id="checkbox"><br>
+  <button type="button" id="fave"> Register</button>
+  </form>
+  </div>
+</div> <!-- col lg6-->
+</div>
 </body>
 </html>
