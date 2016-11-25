@@ -1,13 +1,5 @@
 /**
- * 
-
-$("#searchSubmit").on('search', function () {
-    // search logic here
-    console.log("Search-2 aktiv")
-    // this function will be executed on click of X (clear button)
-    console.log($("#search-2").val());
-    search($("#search-2").val());
-});
+ * Artist Array Processing
 */
 
 function register(){
@@ -45,6 +37,7 @@ function search() {
      console.log("false no findings");
     }
     else{
+        //Ausnahme: Keine main.js Methode zur Aktualisierung des Frontends. - nur ein alert.
         alert(resultString);
     }
 }
