@@ -35,7 +35,8 @@ function search() {
     console.log(searchString);
     for (var i=0;i<array.length;i++){
         console.log("Array value: " + array[i]);
-        if(array[i]==searchString) {
+        //search by name - only by name.
+        if(i%5==1 && array[i]==searchString) {
             resultString+= "ID: "+ array[i-1] + ", Name: " + array[i] + ", Pob: " + array[i+1]+ ", Dob: "+ array[i+2] +" \n";
             success=true;
         }

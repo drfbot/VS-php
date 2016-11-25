@@ -40,7 +40,7 @@ function bye(i){
 }
 
 function showUp(){
-	var content = '<table class="table" border = 1>';
+	var content = '<table class="table" border = 1>  <TH>ID</TH>	<TH>Name</TH> <TH>Place of birth</TH>	<TH>Date of birth</TH> <TH>Favourite</TH>';
 
 	for(var i=0; i<array.length; i++){
 		if(i%5==0){

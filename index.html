@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head xmlns="http://www.w3.org/1999/html">
-<meta charset="UTF-8">
-<title>Amazing JavaScript</title>
+    <meta charset="UTF-8">
+    <title>Amazing JavaScript</title>
 </head>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
@@ -12,34 +12,46 @@
 
 <body>
 <div class="page-header">
-  <h1>Register your Artist <small>The Self-Made-Database</small></h1>
+    <h1>Register your Artist
+        <small>The Self-Made-Database</small>
+    </h1>
 </div>
 <div class="container">
-<div class="col-lg-9">
-<div class="navbar-form navbar-left">
-    <label for="search-2">search by name:</label>
-    <input type="search" name="search-2" id="search-2" placeholder="Namen eingeben">
-    <input type="submit" id="searchSubmit">
-</div>
+    <div class="col-lg-9">
+        <div class="navbar-form navbar-left">
+            <label for="search-2">search by name:</label>
+            <input type="search" name="search-2" id="search-2" placeholder="Namen eingeben">
+            <input type="submit" id="searchSubmit">
+        </div>
 
+        <div class="col-lg-9">
+            <div class="table table-responsive" id="resulttablediv">
+            </div>
+        </div>
 
-<div class="col-sm-6" id="resulttablediv">
-</div>
-
-  <div class="col-sm-6">
-  <form>
-  <label>Forename</label>
-  <input type=text id="vorname"><br>
-  <label>Place of Birth</label>
-  <input type=text id="pob"><br>
-  <label>Date of Birth</label>
-  <input type=text id="dob"><br>
-  <label>Favourite</label>
-  <input type="checkbox" value="true" id="checkbox"><br>
-  <button type="button" id="fave"> Register</button>
-  </form>
-  </div>
-</div> <!-- col lg6-->
+        <div class="col-lg-9">
+            <form class="form-horizontal">
+                <div>
+                    <label>Forename</label>
+                    <input type=text id="vorname" class="form-control"><br>
+                </div>
+                <div>
+                    <label>Place of Birth</label>
+                    <input type=text id="pob" class="form-control"><br>
+                </div>
+                <div>
+                    <label>Date of Birth</label>
+                    <input class="form-control" type=text id="dob"><br>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="true" id="checkbox">Favourite
+                    </label>
+                </div>
+                <button type="button" id="fave"> Register</button>
+            </form>
+        </div>
+    </div> <!-- col lg6-->
 </div>
 </body>
 </html>
